@@ -1,1 +1,53 @@
 /* You can add global styles to this file, and also import other style files */
+@import "primeicons/primeicons.css";
+
+body {
+  margin: 0 !important;
+  box-sizing: border-box !important;
+  color: lightgoldenrodyellow !important;
+}
+
+.foreground {
+  background-color: #008080 !important;
+}
+
+.background {
+  background-color: #f0ffff !important;
+}
+
+.flex {
+  display: flex !important;
+
+  &-space-between {
+    display: flex !important;
+    justify-content: space-between !important;
+  }
+}
+
+.margin {
+  &-top {
+    margin-top: 1rem !important;
+  }
+
+  &-right {
+    margin-right: 1rem !important;
+  }
+
+  &-bottom {
+    margin-bottom: 1rem !important;
+  }
+
+  &-left {
+    margin-left: 1rem !important;
+  }
+}
+
+.p-menuitem {
+  &-text {
+    color: lightgoldenrodyellow !important;
+  }
+
+  &-icon {
+    color: lightgoldenrodyellow !important;
+  }
+}
