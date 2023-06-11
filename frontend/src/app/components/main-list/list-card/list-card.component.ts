@@ -1,4 +1,6 @@
-import {Component} from '@angular/core';
+import {Component, Input} from '@angular/core';
+import {ListItem} from "../../../models/list-item.interface";
+import {enumLabel} from "../../../models/enums/animal";
 
 @Component({
   selector: 'app-list-card',
@@ -6,5 +8,6 @@ import {Component} from '@angular/core';
   styleUrls: ['./list-card.component.scss']
 })
 export class ListCardComponent {
-
+  @Input() pet: ListItem = {} as ListItem
+  protected readonly enumLabel = enumLabel;
 }

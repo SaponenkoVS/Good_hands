@@ -8,6 +8,8 @@ import {ListCardComponent} from './components/main-list/list-card/list-card.comp
 import {AddPetComponent} from './components/add-pet/add-pet.component';
 import {MainListComponent} from "./components/main-list/main-list.component";
 import {UsecasesModule} from "./usecases/usecases.module";
+import {CardModule} from "primeng/card";
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -20,9 +22,10 @@ import {UsecasesModule} from "./usecases/usecases.module";
     BrowserModule,
     AppRoutingModule,
     AppCommonModule,
-    UsecasesModule
+    CardModule,
+    UsecasesModule,
+    HttpClientModule
   ],
-  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

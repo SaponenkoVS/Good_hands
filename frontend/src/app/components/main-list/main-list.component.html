@@ -1,1 +1,6 @@
-<p>main-list works!</p>
+<div class="card-container">
+  <ng-container *ngFor="let pet of petsList">
+    <app-list-card [pet]=pet></app-list-card>
+  </ng-container>
+</div>
+

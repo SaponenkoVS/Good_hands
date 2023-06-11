@@ -1,1 +1,7 @@
-<p>list-card works!</p>
+<p-card [header]="enumLabel(pet.kindOfAnimal)">
+  <img [src]="'images/'+pet.imageUrl" alt="pet image">
+  <p-footer>
+    <p>{{pet.city}}</p>
+    <p>{{pet.price}} {{pet.currency}}</p>
+  </p-footer>
+</p-card>
