@@ -4,7 +4,7 @@ import {MainListComponent} from "./components/main-list/main-list.component";
 import {AddPetComponent} from "./components/add-pet/add-pet.component";
 
 const routes: Routes = [
-  {path: 'main-list', component: MainListComponent},
+  {path: '', pathMatch: "full", component: MainListComponent},
   {path: "add-pet", component: AddPetComponent}
 ];
 
