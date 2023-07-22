@@ -1,0 +1,16 @@
+.filters {
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+p-calendar {
+  display: block;
+}
+
+.dropdowns {
+  justify-content: space-between;
+}
+
+:host ::ng-deep .dd-style {
+  width: 14.5rem
+}

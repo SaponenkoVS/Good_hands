@@ -1,17 +1,19 @@
 import {Injectable} from "@angular/core";
 import {HttpClient} from "@angular/common/http";
-import {ListItem} from "../../../models/list-item.interface";
+import {City} from "../../../models/enums/city.enum";
+import {Pet} from "../../../models/enums/pet.enum";
+import {of} from "rxjs";
 
 @Injectable()
-export class GetPetListUsecase {
+export class FilterPetsUsecase {
   PATH = "pet"
 
   constructor(private http: HttpClient) {
   }
 
-  execute() {
+  execute(filteringParams: FilteringParams) {
     //return this.http.get<ListItem[]>(this.PATH)
-    return [{
+    return of([{
       id: '1',
       kindOfAnimal: 0,
       species: "Bulldog",
@@ -67,6 +69,13 @@ export class GetPetListUsecase {
       city: "Wrocław",
       price: 132,
       currency: "PLN"
-    }] as ListItem[]
+    }])
   }
+}
+
+export interface FilteringParams {
+  dateFrom: Date,
+  dateTo: Date,
+  kindOfPet: Pet,
+  city: City
 }

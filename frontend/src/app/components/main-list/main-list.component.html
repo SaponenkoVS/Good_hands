@@ -1,8 +1,11 @@
-<div>
+<div class="flex list-map-container">
+  <div>
+    <app-main-list-filters (refreshPetsList)="refreshPetsList($event)"></app-main-list-filters>
+    <app-main-list-map></app-main-list-map>
+  </div>
   <div class="card-container">
     <ng-container *ngFor="let pet of petsList">
       <app-main-list-card (click)="toPetDetails(pet.id)" [pet]=pet></app-main-list-card>
     </ng-container>
   </div>
-  <app-main-list-map></app-main-list-map>
 </div>

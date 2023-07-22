@@ -1,5 +1,4 @@
-import {Component, OnInit} from '@angular/core';
-import {GetPetListUsecase} from "./main-list-usecases/get-pet-list.usecase";
+import {Component} from '@angular/core';
 import {ListItem} from "../../models/list-item.interface";
 import {ActivatedRoute, Router} from "@angular/router";
 
@@ -8,18 +7,17 @@ import {ActivatedRoute, Router} from "@angular/router";
   templateUrl: './main-list.component.html',
   styleUrls: ['./main-list.component.scss']
 })
-export class MainListComponent implements OnInit {
-  constructor(private getPetsList: GetPetListUsecase, private router: Router, private activatedRoute: ActivatedRoute) {
+export class MainListComponent {
+  constructor(private router: Router, private activatedRoute: ActivatedRoute) {
   }
 
   petsList: ListItem[] = []
-
-  ngOnInit() {
-    this.petsList = this.getPetsList.execute()
-  }
 
   toPetDetails(id: string) {
     this.router.navigate([id], {relativeTo: this.activatedRoute})
   }
 
+  refreshPetsList(petsList: ListItem[]) {
+    this.petsList = petsList
+  }
 }
