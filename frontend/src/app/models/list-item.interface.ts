@@ -1,8 +1,8 @@
-import {Animal} from "./enums/animal";
+import {Pet} from "./enums/pet.enum";
 
 export interface ListItem {
   id: string,
-  kindOfAnimal: Animal,
+  kindOfAnimal: Pet,
   species: string,
   imageUrl: string,
   city: string,

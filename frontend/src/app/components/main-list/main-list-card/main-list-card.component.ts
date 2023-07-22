@@ -1,6 +1,6 @@
 import {Component, Input} from '@angular/core';
 import {ListItem} from "../../../models/list-item.interface";
-import {enumLabel} from "../../../models/enums/animal";
+import {petEnumLabel} from "../../../models/enums/pet.enum";
 
 @Component({
   selector: 'app-main-list-card',
@@ -9,5 +9,5 @@ import {enumLabel} from "../../../models/enums/animal";
 })
 export class MainListCardComponent {
   @Input() pet: ListItem = {} as ListItem
-  protected readonly enumLabel = enumLabel;
+  protected readonly petEnumLabel = petEnumLabel;
 }

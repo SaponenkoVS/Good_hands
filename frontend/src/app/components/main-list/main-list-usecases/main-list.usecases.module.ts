@@ -1,13 +1,13 @@
 import {NgModule} from "@angular/core";
 import {CommonModule} from "@angular/common";
-import {GetPetListUsecase} from "./get-pet-list.usecase";
+import {FilterPetsUsecase} from "./filter-pets.usecase";
 
 @NgModule({
   imports: [
     CommonModule,
   ],
   providers: [
-    GetPetListUsecase
+    FilterPetsUsecase
   ]
 })
 export class MainListUsecasesModule {
