@@ -1,5 +1,5 @@
-import {NgModule} from '@angular/core';
-import {CommonModule} from '@angular/common';
+import {NgModule} from "@angular/core";
+import {CommonModule} from "@angular/common";
 import {GetPetListUsecase} from "./get-pet-list.usecase";
 
 @NgModule({
@@ -10,5 +10,5 @@ import {GetPetListUsecase} from "./get-pet-list.usecase";
     GetPetListUsecase
   ]
 })
-export class UsecasesModule {
+export class MainListUsecasesModule {
 }

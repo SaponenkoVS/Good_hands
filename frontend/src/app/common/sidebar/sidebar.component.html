@@ -1,0 +1,10 @@
+<p-sidebar styleClass="sidebar" [(visible)]="sidebarVisible">
+  <ng-template pTemplate="header">
+    <img src="assets/images/icon.png" width="70" height="70">
+  </ng-template>
+  <p>sidebar</p>
+</p-sidebar>
+<p-button styleClass="p-button-text p-button-rounded p-button-secondary foreground"
+          (click)="sidebarVisible = !sidebarVisible"
+          icon="pi pi-arrow-right">
+</p-button>

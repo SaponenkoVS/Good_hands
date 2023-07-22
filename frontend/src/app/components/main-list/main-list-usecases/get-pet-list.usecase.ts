@@ -1,6 +1,6 @@
 import {Injectable} from "@angular/core";
 import {HttpClient} from "@angular/common/http";
-import {ListItem} from "../models/list-item.interface";
+import {ListItem} from "../../../models/list-item.interface";
 
 @Injectable()
 export class GetPetListUsecase {

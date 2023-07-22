@@ -1,11 +1,18 @@
 import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
-import {MainListComponent} from "./components/main-list/main-list.component";
 import {AddPetComponent} from "./components/add-pet/add-pet.component";
 
 const routes: Routes = [
-  {path: '', pathMatch: "full", component: MainListComponent},
-  {path: "add-pet", component: AddPetComponent}
+  {path: '', redirectTo: "pets-list", pathMatch: "full"},
+  {
+    path: "pets-list", loadChildren: () =>
+      import("./components/main-list/main-list.module").then((m) =>
+        m.MainListModule
+      )
+  },
+  {
+    path: "add-pet", component: AddPetComponent
+  }
 ];
 
 @NgModule({

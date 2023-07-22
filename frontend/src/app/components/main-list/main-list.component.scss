@@ -2,4 +2,13 @@
   display: grid;
   gap: 0.5rem;
   grid-template-columns: repeat(auto-fit, minmax(3rem, 1fr));
+  padding: 1rem;
+
+  app-main-list-card {
+    transition: 0.2s;
+
+    &:hover {
+      transform: translateY(-2px);
+    }
+  }
 }

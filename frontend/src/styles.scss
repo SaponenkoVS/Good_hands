@@ -4,12 +4,11 @@
 body {
   margin: 0 !important;
   box-sizing: border-box !important;
-  color: lightgoldenrodyellow !important;
-  background-color: #f0ffff !important;
+  background-color: white !important;
 }
 
 .foreground {
-  background-color: #008080 !important;
+  background-color: #E0EEEE !important;
 }
 
 .background {
@@ -43,12 +42,10 @@ body {
   }
 }
 
-.p-menuitem {
-  &-text {
-    color: lightgoldenrodyellow !important;
-  }
+.border {
+  border: 2px #E0EEEE solid !important;
+}
 
-  &-icon {
-    color: lightgoldenrodyellow !important;
-  }
+p-button {
+  border: 2px #E0EEEE solid !important;
 }
