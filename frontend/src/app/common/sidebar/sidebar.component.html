@@ -2,7 +2,16 @@
   <ng-template pTemplate="header">
     <img src="assets/images/icon.png" width="70" height="70">
   </ng-template>
-  <p>sidebar</p>
+  <ng-template pTemplate="content">
+    <p class="pointer" (click)="toPetsListPage()">List of pets</p>
+    <p class="pointer" (click)="toAddPetPage()">Add pet</p>
+    <p class="pointer" (click)="toLoginPage()">Log in</p>
+    <p class="pointer" (click)="toRegistrationPage(0)">Registration</p>
+  </ng-template>
+  <ng-template pTemplate="footer">
+    <p class="pointer" (click)="toRegistrationPage(1)">I am looking for a place for my pet </p>
+    <p class="pointer" (click)="toWriteEmailToUsPage()">Write email to us</p>
+  </ng-template>
 </p-sidebar>
 <p-button styleClass="p-button-text p-button-rounded p-button-secondary foreground"
           (click)="sidebarVisible = !sidebarVisible"
