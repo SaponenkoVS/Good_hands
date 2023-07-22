@@ -15,6 +15,7 @@ export class MainListFiltersComponent implements OnInit {
   }
 
   @Output() refreshPetsList = new EventEmitter<ListItem[]>()
+  @Output() zoomMap = new EventEmitter<string>()
 
   cities = Object.keys(City).filter((cityEnum) => typeof City[cityEnum as keyof typeof City] === "number");
   pets = Object.keys(Pet).filter((petEnum) => typeof Pet[petEnum as keyof typeof Pet] === "number");
@@ -29,6 +30,10 @@ export class MainListFiltersComponent implements OnInit {
         this.refreshPetsList.emit(petsList)
       })
     })
+  }
+
+  onCitySelect(event: any) {
+    this.zoomMap.emit(event.value)
   }
 
   updateDateRange(selectedDate: any) {
