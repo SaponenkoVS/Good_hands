@@ -1,6 +1,5 @@
 import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
-import {AddPetComponent} from "./components/add-pet/add-pet.component";
 
 const routes: Routes = [
   {path: '', redirectTo: "pets-list", pathMatch: "full"},
@@ -11,7 +10,10 @@ const routes: Routes = [
       )
   },
   {
-    path: "add-pet", component: AddPetComponent
+    path: "add-pet", loadChildren: () =>
+      import("./components/add-pet/add-pet.module").then((m) =>
+        m.AddPetModule
+      )
   }
 ];
 

@@ -1,8 +1,8 @@
 import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {MainListFiltersForm} from "./main-list-filters.form";
 import {FilteringParams, FilterPetsUsecase} from "../main-list-usecases/filter-pets.usecase";
-import {City, cityEnumLabel} from "../../../models/enums/city.enum";
-import {Pet, petEnumLabel} from "../../../models/enums/pet.enum";
+import {City} from "../../../models/enums/city.enum";
+import {Pet} from "../../../models/enums/pet.enum";
 import {ListItem} from "../../../models/list-item.interface";
 
 @Component({
@@ -42,8 +42,4 @@ export class MainListFiltersComponent implements OnInit {
     this.filtersForm.dateFrom.setValue(startDate);
     this.filtersForm.dateTo.setValue(endDate);
   }
-
-  protected readonly petEnumLabel = petEnumLabel;
-  protected readonly cityEnumLabel = cityEnumLabel;
-  protected readonly City = City;
 }

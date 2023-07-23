@@ -1,13 +1,19 @@
 <div [formGroup]="filtersForm">
-  <p-calendar [inputStyle]="{'width':'30rem','text-align':'center'}" placeholder="Select time period"
-              selectionMode="range" (onSelect)="updateDateRange($event)"></p-calendar>
+  <p-calendar
+    [inputStyle]="{'width':'30rem','text-align':'center'}"
+    placeholder="Select time period"
+    selectionMode="range" (onSelect)="updateDateRange($event)">
+  </p-calendar>
   <div class="flex dropdowns margin-top">
-    <p-dropdown styleClass="dd-style" (onChange)="onCitySelect($event)" placeholder="Select city"
-                [autoDisplayFirst]="false" formControlName="city"
-                [options]="cities">
+    <p-dropdown
+      styleClass="dd-style" (onChange)="onCitySelect($event)" placeholder="Select city"
+      [autoDisplayFirst]="false" formControlName="city"
+      [options]="cities">
     </p-dropdown>
-    <p-dropdown styleClass="dd-style" placeholder="Select kind of pet" [autoDisplayFirst]="false"
-                formControlName="kindOfPet"
-                [options]="pets"></p-dropdown>
+    <p-dropdown
+      styleClass="dd-style" placeholder="Select kind of pet" [autoDisplayFirst]="false"
+      formControlName="kindOfPet"
+      [options]="pets">
+    </p-dropdown>
   </div>
 </div>

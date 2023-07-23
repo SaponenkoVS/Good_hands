@@ -1,0 +1,23 @@
+<div class="flex pet-data-form">
+  <div [formGroup]="dataForm" class="flex inputs-box">
+    <input pInputText class="add-dd-style" formControlName="nameOfPet" placeholder="Name of your pet">
+    <p-dropdown
+      styleClass="add-dd-style" placeholder="Select kind of pet" [autoDisplayFirst]="false"
+      formControlName="kindOfPet"
+      [options]="pets">
+    </p-dropdown>
+    <p-calendar
+      [inputStyle]="{'width':'30rem','text-align':'center'}"
+      placeholder="Select time period"
+      selectionMode="range">
+    </p-calendar>
+  </div>
+  <div>
+    <input class="fileUpload" [multiple]="true" (input)="onUploadImage($event)" pInputText
+           placeholder="Add images of your pet"
+           type="file" alt="Login"/>
+    <div *ngFor="let image of uploadedImages" class="margin-top">
+      <img class="uploaded-image" [src]="image.base64"/>
+    </div>
+  </div>
+</div>

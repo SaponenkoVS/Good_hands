@@ -1,0 +1,30 @@
+.inputs-box {
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+
+:host ::ng-deep.add-dd-style {
+  width: 30rem;
+  align-items: center;
+}
+
+.pet-data-form {
+  justify-content: space-between;
+  padding: 0 10rem
+}
+
+:host ::ng-deep.fileUpload {
+  width: 40rem;
+  align-items: center;
+}
+
+.upload-images-header {
+  text-align: center;
+  margin-bottom: 1.5px;
+  margin-top: 0;
+}
+
+.uploaded-image {
+  width: 38rem
+}

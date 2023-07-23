@@ -1,1 +1,9 @@
-<p>add-pet works!</p>
+<p-tabView>
+  <p-tabPanel header="Information">
+    <app-add-pet-data [dataForm]="dataForm"></app-add-pet-data>
+  </p-tabPanel>
+  <p-tabPanel header="Location">
+    <app-app-pet-location [locationForm]="locationForm"></app-app-pet-location>
+  </p-tabPanel>
+  <p-tabPanel header="Save"></p-tabPanel>
+</p-tabView>
