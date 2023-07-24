@@ -22,4 +22,12 @@ export class AddPetLocationForm extends BaseForm {
   get building(): FormControl {
     return this.controls['building'] as FormControl;
   }
+
+  get latitude(): FormControl {
+    return this.controls['latitude'] as FormControl;
+  }
+
+  get longitude(): FormControl {
+    return this.controls['longitude'] as FormControl;
+  }
 }

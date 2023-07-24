@@ -1,10 +1,11 @@
 <div class="flex pet-data-form">
   <div [formGroup]="dataForm" class="flex inputs-box">
-    <input pInputText class="add-dd-style" formControlName="nameOfPet" placeholder="Name of your pet">
+    <input required pInputText class="add-dd-style" formControlName="nameOfPet" placeholder="Name of your pet">
     <p-dropdown
       styleClass="add-dd-style" placeholder="Select kind of pet" [autoDisplayFirst]="false"
       formControlName="kindOfPet"
-      [options]="pets">
+      [options]="pets"
+      [required]="true">
     </p-dropdown>
     <p-calendar
       [inputStyle]="{'width':'30rem','text-align':'center'}"

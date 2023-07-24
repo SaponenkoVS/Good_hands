@@ -6,12 +6,17 @@ export class AddPetDataForm extends BaseForm {
     super({});
     this.addControl('kindOfPet', new FormControl(''));
     this.addControl('nameOfPet', new FormControl(''));
+    this.addControl('images', new FormControl(''));
     this.addControl('dateFrom', new FormControl(''));
     this.addControl('dateTo', new FormControl(''));
   }
 
   get kindOfPet(): FormControl {
     return this.controls['kindOfPet'] as FormControl;
+  }
+
+  get images(): FormControl {
+    return this.controls['images'] as FormControl;
   }
 
   get nameOfPet(): FormControl {

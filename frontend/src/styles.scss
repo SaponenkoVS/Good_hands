@@ -56,3 +56,6 @@ h1 {
   border: 2px #E0EEEE solid !important;
 }
 
+.leaflet-default-icon-path {
+  background-image: url(https://unpkg.com/leaflet@1.7.1/dist/images/marker-icon.png);
+}

@@ -3,7 +3,7 @@ import {AddPetDataForm} from "./ add-pet-data.form";
 import {Pet} from "../../../models/enums/pet.enum";
 import {DomEvent} from "leaflet";
 import {Image} from "../../../models/image.interface";
-import on = DomEvent.on;
+
 
 @Component({
   selector: 'app-add-pet-data',
@@ -27,8 +27,6 @@ export class AddPetDataComponent {
         })
       };
     })
+    this.dataForm.images.setValue(this.uploadedImages)
   }
-
-  protected readonly DomEvent = DomEvent;
-  protected readonly on = on;
 }

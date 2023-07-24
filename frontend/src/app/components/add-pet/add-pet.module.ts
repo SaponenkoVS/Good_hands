@@ -12,6 +12,7 @@ import {PaginatorModule} from "primeng/paginator";
 import {ReactiveFormsModule} from "@angular/forms";
 import {InputTextModule} from "primeng/inputtext";
 import {FileUploadModule} from "primeng/fileupload";
+import {AddPetUsecasesModule} from "./add-pet-usecases/add-pet.usecases.module";
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import {FileUploadModule} from "primeng/fileupload";
     PaginatorModule,
     ReactiveFormsModule,
     InputTextModule,
-    FileUploadModule
+    FileUploadModule,
+    AddPetUsecasesModule
   ]
 })
 export class AddPetModule {

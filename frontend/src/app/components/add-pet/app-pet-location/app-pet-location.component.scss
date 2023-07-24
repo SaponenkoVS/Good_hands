@@ -1,0 +1,14 @@
+.location-inputs {
+  flex-direction: column;
+  gap: 1rem
+}
+
+:host ::ng-deep.add-dd-style {
+  width: 30rem;
+  align-items: center;
+}
+
+.location-container {
+  gap: 5rem;
+  justify-content: center;
+}
