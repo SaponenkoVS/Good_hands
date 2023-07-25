@@ -14,14 +14,24 @@ model User {
   id    Int     @id @default(autoincrement())
   email String  @unique
   name  String?
-  posts Post[]
 }
 
-model Post {
-  id        Int     @id @default(autoincrement())
-  title     String
-  content   String?
-  published Boolean @default(false)
-  author    User    @relation(fields: [authorId], references: [id])
-  authorId  Int
+model PetPost {
+  id        Int      @id @default(autoincrement())
+  petName   String
+  city      String
+  street    String
+  building  String
+  latitude  String
+  longitude String
+  dateFrom  DateTime
+  dateTo    DateTime
+  images    Image[]
+}
+
+model Image {
+  imageId   Int      @id @default(autoincrement())
+  main      Boolean
+  imagePath String
+  PetPost   PetPost? @relation(fields: [imageId], references: [id])
 }
