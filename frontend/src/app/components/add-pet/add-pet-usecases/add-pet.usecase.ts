@@ -5,7 +5,7 @@ import {PetEntity} from "../../../models/pet.interafce";
 
 @Injectable()
 export class AddPetUsecase {
-  PATH = "api/pet/add-pet"
+  PATH = "/api/pet/add-pet"
 
   constructor(private http: HttpClient) {
   }
